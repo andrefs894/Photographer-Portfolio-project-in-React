@@ -1,3 +1,4 @@
+import '../css/About.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowTurnDown } from "@fortawesome/free-solid-svg-icons";
 import Pic1 from '../assets/photo.jpg';
@@ -7,7 +8,7 @@ import Tape2 from '../assets/tape.jpg';
 
 function About() {
     return (
-      <div className="about" id="about">
+      <div className="about-container" id="about">
           <div className="text">
             <h1>About me</h1>
             <hr />
@@ -20,7 +21,7 @@ function About() {
             <img src={Pic2} className="pic2" />
             <img src={Tape2} className="tape2" />
           </div>
-          <div className='check'>
+          <div className='action'>
             <hr />
             <a href='/#contact'>
               <h3><FontAwesomeIcon icon={faArrowTurnDown} /> contact me <FontAwesomeIcon icon={faArrowTurnDown} /></h3>
