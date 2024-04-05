@@ -28,7 +28,7 @@ function Home() {
       <div className='content'>
         <div className='text'>
           <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
         </div>
         <div className='image'>
           <img src={images[image]} />
