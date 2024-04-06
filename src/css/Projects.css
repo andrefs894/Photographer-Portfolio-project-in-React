@@ -15,6 +15,6 @@
 
 .projects-container .slider img {
     width:100%;
-    max-height: 80vh;
+    max-height: 75vh;
     object-fit: cover;
 }

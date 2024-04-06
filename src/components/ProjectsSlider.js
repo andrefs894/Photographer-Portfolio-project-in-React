@@ -8,7 +8,7 @@ import Photo3 from '../assets/home3.jpg';
 import Photo4 from '../assets/home4.jpg';
 import Photo5 from '../assets/home5.jpg';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverFlow, Navigation, Pagination } from 'swiper/modules';
+import { EffectCoverflow, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -19,30 +19,40 @@ function ProjectsSlider() {
     Photo1, Photo2, Photo3, Photo4, Photo5
   ]
 
+  const history = () => {
+
+  }
+
   return (
     <div className="slider">
       <Swiper
+        effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
         loop={true}
-        slidesPerView={'auto'}
+        slidesPerView={2}
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        }}
         pagination={{el:'.swiper-pagination',clickable:true}}
         navigation={{nextEl:'.swiper-button-next',prevEl:'.swiper-button-prev',clickable:true}}
-        modules={[Navigation, Pagination]}
+        modules={[EffectCoverflow,Navigation, Pagination]}
         className='swiper_container'
       >
-        <SwiperSlide>
-          <img src={slides[0]} className='slide' />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slides[1]} className='slide' />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slides[2]} className='slide' />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slides[3]} className='slide' />
-        </SwiperSlide>
+        {
+          slides.map((slide, index) => (
+            <SwiperSlide key={index}>
+              <img src={slide} className='slide' onMouseDown={() => {
+                <div><p>akhsdhgfhas</p></div>
+              }
+              } />
+            </SwiperSlide>
+          ))
+        }
         <div className='slider-controler'>
           <div className='swiper-button-prev slider-arrow'>
           </div>
