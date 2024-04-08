@@ -1,27 +1,22 @@
 import '../css/Projects.css';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowCircleLeft, faArrowCircleRight } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
-import Photo1 from '../assets/home1.jpg';
-import Photo2 from '../assets/home2.jpg';
-import Photo3 from '../assets/home3.jpg';
-import Photo4 from '../assets/home4.jpg';
-import Photo5 from '../assets/home5.jpg';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow, Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, EffectCoverflow, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowsTurnRight } from '@fortawesome/free-solid-svg-icons';
+import slides from '../Collection'
+import { Link, Route, Routes } from 'react-router-dom';
+import Project from './Project';
 
 function ProjectsSlider() {
-  const slides = [
-    Photo1, Photo2, Photo3, Photo4, Photo5
-  ]
 
-  const history = () => {
-
-  }
+<Routes>
+  <Route path="/#projects" element={<ProjectsSlider />}></Route>
+  <Route path="/#projects/project" element={<Project />}></Route>
+</Routes>
 
   return (
     <div className="slider">
@@ -30,34 +25,47 @@ function ProjectsSlider() {
         grabCursor={true}
         centeredSlides={true}
         loop={true}
+        speed={1000}
         slidesPerView={2}
+        autoplay={{
+          delay: 10000,
+          disableOnInteraction: false,
+        }
+        }
         coverflowEffect={{
           rotate: 50,
           stretch: 0,
           depth: 100,
-          modifier: 1,
+          modifier: 1.5,
           slideShadows: true,
         }}
         pagination={{el:'.swiper-pagination',clickable:true}}
         navigation={{nextEl:'.swiper-button-next',prevEl:'.swiper-button-prev',clickable:true}}
-        modules={[EffectCoverflow,Navigation, Pagination]}
-        className='swiper_container'
+        modules={[Autoplay,EffectCoverflow,Navigation, Pagination]}
       >
         {
           slides.map((slide, index) => (
             <SwiperSlide key={index}>
-              <img src={slide} className='slide' onMouseDown={() => {
-                <div><p>akhsdhgfhas</p></div>
-              }
-              } />
+              <img src={slide.cover} />
+              <div className='description'>
+                <div className='title'>
+                  <h3>{slide.title}</h3>
+                </div>
+                <div className='text'>
+                  <p>{slide.text}</p>
+                </div>
+                <div className='action'>
+                  <Link to="/#projects/project">
+                    <h4>See more <FontAwesomeIcon icon={faArrowsTurnRight} /></h4>
+                  </Link>
+                </div>
+              </div>
             </SwiperSlide>
           ))
         }
         <div className='slider-controler'>
-          <div className='swiper-button-prev slider-arrow'>
-          </div>
-          <div className='swiper-button-next slider-arrow'>
-          </div>
+          <div className='swiper-button-prev slider-arrow'></div>
+          <div className='swiper-button-next slider-arrow'></div>
           <div className='swiper-pagination'></div>
         </div>
       </Swiper>
