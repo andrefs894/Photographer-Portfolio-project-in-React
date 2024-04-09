@@ -3,7 +3,7 @@ import { faInstagram, faWhatsapp, faLinkedin, faBehance } from '@fortawesome/fre
 
 function Nav() {
   return (
-    <div className="nav">
+    <nav className="nav">
       <div className='header'>
         <div className="socials">
           <FontAwesomeIcon icon={faInstagram} beat className='icons' />
@@ -23,7 +23,7 @@ function Nav() {
         <a href='/#about' className='menu-item'>ABOUT</a>
         <a href='/#contact' className='menu-item'>CONTACT</a>
       </div>
-    </div>
+    </nav>
   );
   }
 

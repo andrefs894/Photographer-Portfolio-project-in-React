@@ -24,11 +24,9 @@
 }
 
 .home-container .home .image img {
-    border: #12100E solid 1px;
     width:100%;
     aspect-ratio: 4/4;
     object-fit: cover;
-    filter: saturate(100%) contrast(90%) grayscale(20%) hue-rotate(300deg);
     border-radius: 100%;
 }
 

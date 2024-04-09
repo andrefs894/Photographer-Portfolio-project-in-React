@@ -2,66 +2,136 @@
     background-color: #12100E;
     padding: 0 10%;
     color:white;
-    display: flex;
-    flex-direction: column;
 }
 
-.projects-container .slider {
-    flex:1;
-    display: flex;
-    align-items: center;
-}
+    .projects-container .projects {
+        display: flex;
+        flex-direction: column;
+    }
 
-.swiper {
-    flex:1;
-    width: 100%;
-    height: 90vh;
-}
+/*-------SLIDER-------*/
+        .projects-container .slider {
+            height:100vh;
+        }
 
-.swiper-slide {
-    text-align: center;
-    justify-items: center;
-    overflow: hidden;
+            .projects-container .slider img {
+                width:100%;
+                height:100%;
+                object-fit: cover;
+                position: relative;
+            }
 
-}
+            .projects-container .slider .description {
+                position: absolute;
+                left: 0;
+                top: 60%;
+                height: 40%;
+                background-color: #12100E;
+                text-align: left;
+                padding: 0 5%;
+                cursor: auto;
+                opacity: 80%;
+                display: flex;
+                flex-direction: column;
+            }
 
-.projects-container .slider img {
-    width:100%;
-    height:100%;
-    object-fit: cover;
-    position: relative;
-}
+            .projects-container .slider .text {
+                margin-top: -4%;
+                padding: 0 0 0 10%;
+            }
 
-.projects-container .slider .description {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    background-color: #12100E;
-    text-align: left;
-    padding: 5% 5%;
-    display:flex;
-    flex-direction: column;
-    cursor:auto
-}
+            .projects-container .slider .action {
+                position: absolute;
+                left: 0;
+                top: 90%;
+                width: 100%;
+                height:10%;
+                opacity: 90%;
+                background-color: #12100E;
+                text-align: right;
+            }
 
-.projects-container .slider .text {
-    padding: 0 0 0 10%;
-}
+            .projects-container .slider .action a {
+                text-decoration: none;
+                color:white
+            }
 
-.projects-container .slider .action {
-    flex:1;
-    margin-top: auto;
-}
+            .projects-container .slider .action:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
 
-.projects-container .slider .action a {
-    text-decoration: none;
-    color:white
-}
+/*---------SWIPER----------*/
+        .swiper {
+            flex:1;
+            width: 100%;
+            height: 85vh;
+        }
 
+        .swiper-slide {
+            text-align: center;
+            justify-items: center;
+        }
 
-.projects-container .slider .action:hover {
-    text-decoration: underline;
-    cursor: pointer;
-}
+/*-------PROJECT-------*/
+        .projects-container .project {
+            height: 100vh;
+        }
 
+            .projects-container .project .title div{
+                display: flex;
+                align-items: center;
+            }
 
+            .projects-container .project .title div a{
+                padding: 1% 1%;
+                color:white;
+                font-size: 18px
+            }
+
+            .projects-container .project .photos img{
+                max-width:100%;
+                height:auto;
+                vertical-align: middle;
+                display: inline-block;
+                transition: ease-in-out .5s;
+            }
+
+            .projects-container .project .photos img:hover{
+                transform: scale(0.95);
+                cursor: pointer;
+            }
+
+            .projects-container .project .photos > div{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .projects-container .project .photos > div > img{
+                width:100%;
+                height:100%;
+                object-fit: cover;
+            }
+
+            .projects-container .project .photos {
+                display: grid;
+                grid-gap: 5px;
+                grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+                grid-auto-rows: 200px;
+                grid-auto-flow: dense;
+                overflow: scroll;
+            }
+
+            .projects-container .project .photos .wide {
+                grid-column: span 2;
+            }
+
+            .projects-container .project .photos .tall {
+                grid-row: span 2;
+            }
+
+            .projects-container .project .photos .big {
+                grid-column: span 2;
+                grid-row: span 2;
+            }

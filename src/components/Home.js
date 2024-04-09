@@ -1,6 +1,6 @@
 import '../css/Home.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowTurnDown } from '@fortawesome/free-solid-svg-icons';
+import { faArrowsTurnRight } from '@fortawesome/free-solid-svg-icons';
 import Photo1 from '../assets/home1.jpg';
 import Photo2 from '../assets/home2.jpg';
 import Photo3 from '../assets/home3.jpg';
@@ -25,7 +25,7 @@ function Home() {
   }, []);
 
   return (
-    <div className='home-container' id='home'>
+    <div className='home-container' id="home">
       <div className='home'>
         <div className='text'>
           <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
@@ -38,7 +38,7 @@ function Home() {
       <div className='action'>
         <hr />
         <a href='/#projects'>
-          <h3><FontAwesomeIcon icon={faArrowTurnDown} /> check my work <FontAwesomeIcon icon={faArrowTurnDown} /></h3>
+          <h3><FontAwesomeIcon icon={faArrowsTurnRight} /> check my work <FontAwesomeIcon icon={faArrowsTurnRight} /></h3>
         </a>
         <hr />
       </div>
