@@ -33,6 +33,7 @@
                 opacity: 80%;
                 display: flex;
                 flex-direction: column;
+                border-radius: 5% 5% 0 0;
             }
 
             .projects-container .slider .text {
@@ -76,6 +77,7 @@
 /*-------PROJECT-------*/
         .projects-container .project {
             height: 100vh;
+            overflow-x: hidden;
         }
 
             .projects-container .project .title div{
@@ -91,10 +93,11 @@
 
             .projects-container .project .photos img{
                 max-width:100%;
-                height:auto;
-                vertical-align: middle;
+                height:200px;
+                vertical-align: top;
                 display: inline-block;
                 transition: ease-in-out .5s;
+                animation: photo 2s ease-in-out;
             }
 
             .projects-container .project .photos img:hover{
@@ -117,10 +120,10 @@
             .projects-container .project .photos {
                 display: grid;
                 grid-gap: 5px;
-                grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-                grid-auto-rows: 200px;
-                grid-auto-flow: dense;
-                overflow: scroll;
+                height: 100vh;
+                overflow-x: auto;
+                overflow-y: hidden;
+                white-space: nowrap;
             }
 
             .projects-container .project .photos .wide {
@@ -135,3 +138,12 @@
                 grid-column: span 2;
                 grid-row: span 2;
             }
+
+@keyframes photo {
+    from {
+        translate: 0 -100%;
+    }
+    to {
+        translate: 0 0;
+    }
+}

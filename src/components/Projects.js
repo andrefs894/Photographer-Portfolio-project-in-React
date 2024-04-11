@@ -17,9 +17,3 @@ function Projects() {
 }
 
 export default Projects;
-/*
-          <Routes>
-            <Route path="/" element={<ProjectsSlider />} />
-            <Route path="/:id" element={<Project title={title} setTitle={setTitle} />} />
-          </Routes>
-*/

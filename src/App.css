@@ -1,4 +1,4 @@
-body{
+body {
   overflow: hidden;
 }
 
@@ -47,7 +47,7 @@ button {
 
 .nav {
   flex:1;
-  background: linear-gradient(rgba(25, 25, 25, 0.7), rgba(25, 25, 25, 0.7)),url('./assets/nav.jpg');
+  background: linear-gradient(rgba(31, 31, 31, 0.6), rgba(31, 31, 31, 0.6)),url('./assets/nav.jpg');
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -117,8 +117,6 @@ button {
   overflow-y: hidden;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
-  overflow-x: 'auto';
-  white-space: 'nowrap'
 }
 
 .home-container, .projects-container, .services-container, .about-container, .contact-container {
