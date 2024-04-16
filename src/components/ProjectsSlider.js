@@ -6,9 +6,8 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowTurnDown } from '@fortawesome/free-solid-svg-icons';
+import { faArrowsTurnRight } from '@fortawesome/free-solid-svg-icons';
 import slides from '../Collection'
-import { Link } from 'react-router-dom';
 import { useRef, useState } from 'react';
 
 function ProjectsSlider({setProject}) {
@@ -20,7 +19,7 @@ function ProjectsSlider({setProject}) {
   }
 
   return (
-    <div className="slider" id="slider">
+    <div className="slider" id="projects">
       <div className='title'>
         <h1>Projects</h1>
         <hr />
@@ -55,7 +54,7 @@ function ProjectsSlider({setProject}) {
                 </div>
                 <div className='action'>
                   <a href="/#project" onClick={() => handleProject(slide.title)}>
-                    <h4>See more <FontAwesomeIcon icon={faArrowTurnDown} /></h4>
+                    <h4>See more <FontAwesomeIcon icon={faArrowsTurnRight} /></h4>
                   </a>
                 </div>
               </SwiperSlide>

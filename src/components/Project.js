@@ -1,6 +1,6 @@
 import '../css/Projects.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowTurnUp } from '@fortawesome/free-solid-svg-icons';
+import { faArrowsTurnRight } from '@fortawesome/free-solid-svg-icons';
 
 function Project({project}) {
   return (
@@ -11,7 +11,7 @@ function Project({project}) {
             <div className='title'>
               <div>
                 <a href="/#projects">
-                  <FontAwesomeIcon icon={faArrowTurnUp} />
+                  <FontAwesomeIcon icon={faArrowsTurnRight} style={{transform:`rotate(180deg)`}} />
                 </a>
                 <h1>Projects / {project[0].title}</h1>
               </div>
